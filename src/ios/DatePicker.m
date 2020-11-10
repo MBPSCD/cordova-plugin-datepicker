@@ -259,6 +259,10 @@
   if (locale) {
     [self.datePicker setLocale:locale];
   }
+    
+  if (@available(iOS 14, *)) {
+    self.datePicker.preferredDatePickerStyle = UIDatePickerStyleWheels;
+  }
 }
 
 - (NSDateFormatter *)createISODateFormatter:(NSString *)format timezone:(NSTimeZone *)timezone {
